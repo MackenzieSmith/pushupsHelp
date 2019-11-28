@@ -20,9 +20,9 @@ require(tigerstats)
 
 Create an Rstudio project called pushups in your project folders directory. Using the dataset called pushups from the tigerstats package in R; answer the question posed by this null and alternate hypothesis in an html markdown document.
 
-$H_0$: There is no difference between the average pushups of line vs skill players
+$H_0$: There is no difference between the average pushups of line vs skill players in two minutes.  
 
-$H_A$: The average pushups of line players is statistically different than that of skill players.
+$H_A$: The average pushups of line players is statistically different than that of skill players can do in two minutes.  
 
 submit that html file to canvas to complete this assignment.
 
@@ -64,7 +64,7 @@ Our variable analysis gives weight and pushups as numerical variables and positi
 boxplot(pushups~position,data=players,main="skill vs line pushups")
 ```
   
-It appears that the line players number of pushups are less than the number of pushups from the skill players. 
+It appears that the line players number of pushups in two minutes are less than the number of pushups from the skill players in two minutes.  
  
 ### Numerical Descriptive Results
 
@@ -74,6 +74,7 @@ It appears that the line players number of pushups are less than the number of p
 summary(players)
 ```
 
+The numerical summary shows that the median number of pushups for all players in two minutes is 36. The mean number of pushups for all players in two minutes is about 43.
 
 ## Inferential Results
 
@@ -84,14 +85,17 @@ The test we will use is the t-test.
 ```{r}
 t.test(pushups~position,data=players)
 ```
+
+The t test shows that the line players number of pushups are, on average 17.12500 in two minutes, and the skill player number of pushups are, on average 49.72727 in two minutes.  
+
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
 
-The question was, "Is there a difference in the average pushups of players in the line and skill positions?"
+The question was, "Is there a difference in the average pushups of players in the line and skill positions in two minutes?"  
 
-The null hypothesis is $H_0$ is, "There is no difference between the average pushups of players in the line or skill positions."
+The null hypothesis is $H_0$ is, "There is no difference between the average pushups of players in the line or skill positions in two minutes."  
 
-The boxplot indicates a significant difference between the pushups distributions of players in the two positions. The numerical summary show line players number of pushups are, on average 17.12500, and the skill player number of pushups are, on average 49.72727.
+The boxplot indicates a significant difference between the pushups distributions of players in the two positions within the two minutes.The numerical summary show line players number of pushups are, on average 17.12500 in two minutes, and the skill player number of pushups are, on average 49.72727 in two minutes.  
 
-A t-test of difference in means gave a p-value of 0.000009421, this is less than 0.05, so we rejct the null hypothesis and conclude we have evidence of a difference in average numbers of pushups between players in the two positions.
+A t-test of difference in means gave a p-value of 0.000009421, this is less than 0.05, so we rejct the null hypothesis and conclude we have evidence of a difference in average numbers of pushups between players in the two positions in two minutes.  
